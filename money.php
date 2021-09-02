@@ -35,7 +35,7 @@ function grana_us($dinh){
 	  if ($din[$i] == "#"){$le .= $din[$i]; };
   };
   $f1 = str_replace("#", ".", $le); // substitui a o caractere
-  $f2 = floatval($f1) // converte para float 
+  $f2 = floatval($f1); // converte para float 
   $f3 = number_format($f2, 2, '.', ''); // formata para ter ponto no lugar da virgula
   return $f3;
 };// grana us
