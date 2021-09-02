@@ -5,7 +5,7 @@
 # versao 1.4 - 2021-09-01
 
 function grana_us($dinh){
-  $din = trim($dinh); // tira espaços
+  $din = "0" + trim($dinh); // tira espaços
   $tam = strlen($din);// tamanho do texto
   if ($tam > 1){ // 5,
       if ($din[$tam - 1] == ","){$din[$tam - 1] = "#";}; // ultimo caractere
@@ -35,8 +35,8 @@ function grana_us($dinh){
 	  if ($din[$i] == "#"){$le .= $din[$i]; };
   };
   $f1 = str_replace("#", ".", $le); // substitui a o caractere
-  $f2 = $f1;
-  $f3 = number_format($f2, 2, '.', '');
+  $f2 = floatval($f1) // converte para float 
+  $f3 = number_format($f2, 2, '.', ''); // formata para ter ponto no lugar da virgula
   return $f3;
 };// grana us
 
