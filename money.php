@@ -2,10 +2,10 @@
 # este arquivo formata um valor digitado em um form para ser inserido no banco
 # https://github.com/aldosena/money
 # aldosena10@gmail.com
-# versao 1.4 - 2021-09-01
+# versao 1.4 - 2022-12-24
 
 function grana_us($dinh){
-  $din = "0" + trim($dinh); // tira espaços
+  $din = "0".trim($dinh); // tira espaços
   $tam = strlen($din);// tamanho do texto
   if ($tam > 1){ // 5,
       if ($din[$tam - 1] == ","){$din[$tam - 1] = "#";}; // ultimo caractere
